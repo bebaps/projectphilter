@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>Project Philter</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="semantic.min.css">
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+</head>
+<body>
+
+<div class="ui padded stackable grid">
+
+    <header class="blue one column row">
+        <div class="column">
+        <nav class="ui blue inverted menu right">
+            <a href="#" class="item">Philter</a>
+
+            <div class="right menu">
+                <div class="ui dropdown item">
+                    <i class="alarm icon"></i>
+                    <div class="text">Notifications</div>
+                    <i class="dropdown icon"></i>
+                    <div class="menu">
+                        <div class="item">
+                            Notifications go here
+                        </div>
+                    </div>
+                </div>
+                <div class="ui dropdown item">
+                    <i class="user icon"></i>
+                    <div class="text">User</div>
+                    <i class="dropdown icon"></i>
+                    <div class="menu">
+                        <div class="item"><a href="#">Update</a></div>
+                        <div class="item"><a href="#">Logout</a></div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        </div>
+    </header>
+
+    <main class="equal height row">
+        <aside class="red two wide column sidebar">
+            <nav class="ui red inverted fluid vertical labeled icon menu">
+                <a href="#" class="active item">
+                    <i class="large dashboard icon"></i>
+                    Dashboard
+                </a>
+                <a href="#" class="item">
+                    <i class="large folder open icon"></i>
+                    Projects
+                </a>
+                <a href="#" class="item">
+                    <i class="large male icon"></i>
+                    Leads
+                </a>
+                <a href="#" class="item">
+                    <i class="large comments icon"></i>
+                    Messages
+                </a>
+                <a href="#" class="item">
+                    <i class="large settings icon"></i>
+                    Settings
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Sub Navigation
+            -this menu displays all of the available projects to choose from
+        -------------------------->
+        <aside class="teal two wide column">
+            <nav class="ui teal inverted fluid secondary vertical pointing menu">
+                <a href="#" class="active item">Lead Name</a>
+                <a href="#" class="item">Lead Name</a>
+                <a href="#" class="item">Lead Name</a>
+            </nav>
+        </aside>
+
+        <!-- Project Area
+            - this area shows the details of the selected project
+        -------------------------->
+        <section class="twelve wide column">
+            <div class="ui top attached tabular menu">
+                <a class="active item" data-tab="first">Overview</a>
+                <a class="item" data-tab="second">Edit</a>
+            </div>
+
+            <div class="ui bottom attached active tab segment" data-tab="first">
+                <div class="ui two column grid">
+                    <div class="column">
+                        <h1 class="ui header">
+                            <span>Project Name</span>
+                            <div class="sub header">
+                                <span>Lead Name</span> |
+                                <span>Lead Email</span>
+                            </div>
+                        </h1>
+                        <div class="ui buttons">
+                          <button class="ui positive button">Accept</button>
+                          <span class="or"></span>
+                          <button class="ui negative button">Reject</button>
+                        </div>
+
+                        <h3 class="ui header">Project Overview</h3>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil dolore error officia, voluptatibus, magnam quae repudiandae, a aut corrupti sit expedita dicta rerum cumque excepturi deleniti esse odio nobis totam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque dolores veritatis delectus accusamus, eius quam, quasi consequuntur esse! Reprehenderit a nemo veniam consequuntur in enim porro aut quibusdam tenetur dicta! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam illum dolores debitis porro doloribus tenetur pariatur modi, obcaecati aliquam commodi cum impedit non, eos atque nihil eveniet amet hic beatae.</p>
+                    </div>
+
+                    <div class="column">
+                        <div class="ui purple fluid card">
+                            <div class="ui image">
+                                <img src="http://placehold.it/250x250" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bottom Area
+                -------------------------->
+                <div class="ui three column row grid">
+                    <div class="column">
+                        <div class="ui center aligned red segment">
+                            <div class="ui huge green statistic">
+                                <div class="value">6/7</div>
+                                <div class="label">Bottom Lines Met</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="column">
+                        <div class="ui center aligned blue segment">
+                            <div class="ui huge green statistic">
+                                <div class="value">4/5</div>
+                                <div class="label">Lead Requirements Met</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="column">
+                        <div class="ui center aligned green segment">
+                            <div class="ui huge green statistic">
+                                <div class="value">3/3</div>
+                                <div class="label">Ideals Met</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ui bottom attached tab segment" data-tab="second">
+                <div class="ui two column grid">
+                    <div class="column">
+                        <h2 class="ui dividing header">
+                            <i class="huge settings icon"></i>
+                            <div class="content">
+                                <span>Your Bottom Lines</span>
+                                <div class="sub header">Take a look at how this Project stacks up</div>
+                            </div>
+                        </h2>
+
+                        <div class="ui relaxed list">
+                            <div class="item">
+                                <i class="large green check icon"></i>
+                                <div class="content">
+                                    <div class="header">Budget</div>
+                                    <div class="description">This meets your budget of $500</div>
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <i class="large green check icon"></i>
+                                <div class="content">
+                                    <div class="header">Timeline</div>
+                                    <div class="description">This meets your timeline of 90 days</div>
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <i class="large green check icon"></i>
+                                <div class="content">
+                                    <div class="header">Size</div>
+                                    <div class="description">This meets your size of 5 pages</div>
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <i class="large red minus icon"></i>
+                                <div class="content">
+                                    <div class="header">Framework</div>
+                                    <div class="description">You can not use a framework</div>
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <i class="large red minus icon"></i>
+                                <div class="content">
+                                    <div class="header">Theme</div>
+                                    <div class="description">You can not use a template or theme</div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <div class="column">
+                        <div class="ui green fluid card">
+                            <div class="ui image">
+                                <img src="http://placehold.it/250x250" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ui bottom attached tab segment" data-tab="third">
+                <div class="ui two column grid">
+                    <div class="column">
+                        <h2 class="ui dividing header">
+                            <i class="huge male icon"></i>
+                            <div class="content">
+                                <span>Lead Characteristics</span>
+                                <div class="sub header">See how you might get along with this client</div>
+                            </div>
+                        </h2>
+
+                        <div class="ui relaxed list">
+                            <div class="item">
+                                <i class="large green check icon"></i>
+                                <div class="content">
+                                    <div class="header">Budget</div>
+                                    <div class="description">This meets your budget of $500</div>
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <i class="large green check icon"></i>
+                                <div class="content">
+                                    <div class="header">Timeline</div>
+                                    <div class="description">This meets your timeline of 90 days</div>
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <i class="large green check icon"></i>
+                                <div class="content">
+                                    <div class="header">Size</div>
+                                    <div class="description">This meets your size of 5 pages</div>
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <i class="large red minus icon"></i>
+                                <div class="content">
+                                    <div class="header">Framework</div>
+                                    <div class="description">You can not use a framework</div>
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <i class="large red minus icon"></i>
+                                <div class="content">
+                                    <div class="header">Theme</div>
+                                    <div class="description">You can not use a template or theme</div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <div class="column">
+                        <div class="ui green fluid card">
+                            <div class="ui image">
+                                <img src="http://placehold.it/250x250" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ui bottom attached tab segment" data-tab="fourth">
+                <div class="ui two column grid">
+                    <div class="column">
+                        <h2 class="ui dividing header">
+                            <i class="huge diamond icon"></i>
+                            <div class="content">
+                                <span>Ideals</span>
+                                <div class="sub header">Is this the ideal project?</div>
+                            </div>
+                        </h2>
+
+                        <div class="ui relaxed list">
+                            <div class="item">
+                                <i class="large green check icon"></i>
+                                <div class="content">
+                                    <div class="header">Budget</div>
+                                    <div class="description">This meets your budget of $500</div>
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <i class="large green check icon"></i>
+                                <div class="content">
+                                    <div class="header">Timeline</div>
+                                    <div class="description">This meets your timeline of 90 days</div>
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <i class="large green check icon"></i>
+                                <div class="content">
+                                    <div class="header">Size</div>
+                                    <div class="description">This meets your size of 5 pages</div>
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <i class="large red minus icon"></i>
+                                <div class="content">
+                                    <div class="header">Framework</div>
+                                    <div class="description">You can not use a framework</div>
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <i class="large red minus icon"></i>
+                                <div class="content">
+                                    <div class="header">Theme</div>
+                                    <div class="description">You can not use a template or theme</div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <div class="column">
+                        <div class="ui green fluid card">
+                            <div class="ui image">
+                                <img src="http://placehold.it/250x250" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="one purple center aligned column row">
+        <span class="column">&copy; Philter 2015.</span>
+    </footer>
+
+</div>
+
+<!-- Scripts
+-------------------------->
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="semantic.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

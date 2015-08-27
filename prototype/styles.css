@@ -1,0 +1,48 @@
+/****************************************
+    Header
+****************************************/
+
+header .ui.menu {
+    background-color: #3B83C0;
+    padding: 10px;
+}
+
+header .ui.menu .item {
+    color: #ffffff;
+}
+
+.sidebar {
+    background-color: #2c3a41;
+}
+
+aside .fluid.vertical.menu {
+    background-color: #D95C5C;
+}
+
+aside .fluid.vertical.menu .item {
+    color: #ffffff;
+}
+
+aside .ui.vertical.menu > .item:first-child {
+  border-radius: 0px;
+}
+
+aside .fluid.vertical.menu .active.item {
+    box-shadow: 14px 0 0 #5db68c;
+}
+
+.ui.menu {
+    box-shadow: none;
+}
+
+.module {
+    background-color: #red;
+}
+
+/****************************************
+    Footer
+****************************************/
+footer {
+    background-color: #ffffff;
+    border-top: 1px solid #4d8ca1;
+}

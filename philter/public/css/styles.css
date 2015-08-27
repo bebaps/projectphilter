@@ -1,0 +1,61 @@
+/****************************************
+    Document base styles
+****************************************/
+html, body {
+    color: #000000;
+}
+
+/****************************************
+    Header styles
+****************************************/
+.primary-header, .primary-footer {
+    background-color: #2d506e;
+}
+
+.ui.menu {
+    box-shadow: none;
+    background-color: transparent;
+}
+
+.ui.menu .item {
+    color: #efefef;
+}
+
+.ui.menu a.item:hover {
+    color: #46a0d5;
+}
+
+.ui.menu .active.item {
+    color: #46a0d5;
+}
+
+/****************************************
+    Sidebar styles
+****************************************/
+
+.ui.vertical.menu {
+    background: transparent;
+}
+
+.ui.icon.menu > .item {
+    color: #efefef;
+}
+
+.ui.vertical.menu .active.item {
+  box-shadow: -15px 0 0;
+}
+
+.ui.grid>.row>.primary-sidebar.column {
+    margin-top: -1rem;
+    margin-bottom: -1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: #398ec0;
+}
+
+/****************************************
+    Footer styles
+****************************************/
+.primary-footer {
+    color: #efefef;
+}

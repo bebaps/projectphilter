@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>Project Philter</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="semantic.min.css">
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+</head>
+<body>
+<!-- Index
+    - this page, the homepage, is a dashboard
+    - the user must be logged in to view this page
+    - most of the content in the dashboard area must be dynamically generated
+-------------------------->
+
+<div class="ui padded stackable grid">
+
+    <header class="blue one column row">
+        <div class="column">
+        <nav class="ui blue inverted menu right">
+            <a href="#" class="item">Philter</a>
+
+            <div class="right menu">
+                <div class="ui dropdown item">
+                    <i class="alarm icon"></i>
+                    <div class="text">Notifications</div>
+                    <i class="dropdown icon"></i>
+                    <div class="menu">
+                        <div class="item">
+                            Notifications go here
+                        </div>
+                    </div>
+                </div>
+                <div class="ui dropdown item">
+                    <i class="user icon"></i>
+                    <div class="text">Alexander Persky</div>
+                    <i class="dropdown icon"></i>
+                    <div class="menu">
+                        <div class="item"><a href="#">Update</a></div>
+                        <div class="item"><a href="#">Logout</a></div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        </div>
+    </header>
+
+    <main class="equal height row">
+        <aside class="green two wide column sidebar">
+            <nav class="ui green inverted fluid vertical labeled icon menu">
+                <a href="#" class="active item">
+                    <i class="large dashboard icon"></i>
+                    Dashboard
+                </a>
+                <a href="#" class="item">
+                    <i class="large folder open icon"></i>
+                    Projects
+                </a>
+                <a href="#" class="item">
+                    <i class="large male icon"></i>
+                    Leads
+                </a>
+                <a href="#" class="item">
+                    <i class="large comments icon"></i>
+                    Messages
+                </a>
+                <a href="#" class="item">
+                    <i class="large settings icon"></i>
+                    Settings
+                </a>
+            </nav>
+        </aside>
+
+        <section class="fourteen wide column">
+            <div class="ui stackable two column grid">
+                <section class="column">
+                    <div class="ui segment">
+                        <h2 class="ui dividing header">
+                            <i class="huge diamond icon"></i>
+                            <div class="content">
+                                <span>Featured Project</span>
+                                <div class="sub header">This is your ideal project</div>
+                            </div>
+                        </h2>
+
+                        <div class="ui link items">
+                            <div class="item">
+                                <div class="small image tablet">
+                                    <img src="http://placehold.it/150x165" alt="">
+                                </div>
+                                <div class="content">
+                                    <h1 class="ui header">
+                                        <span>Project Name</span>
+                                        <div class="sub header">
+                                            <span>Lead Name</span>
+                                        </div>
+                                    </h1>
+
+                                    <div class="meta">
+                                        <span class="budget">$1500</span>|
+                                        <span class="timeline">90 Days</span>|
+                                        <span class="hours">15 hours</span>|
+                                        <span class="cms">Wordpress</span>
+                                    </div>
+
+                                    <div class="description">
+                                        <p>This project meets 4 bottom lines</p>
+                                        <p>This lead is a good match</p>
+                                        <p>This is an ideal project</p>
+                                    </div>
+
+                                    <div class="extra">
+                                        <div class="ui tiny buttons">
+                                            <button class="ui positive button">Accept</button>
+                                            <span class="or"></span>
+                                            <button class="ui negative button">Reject</button>
+                                        </div>
+                                        <!-- <div class="ui label">Limited</div> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="column">
+                    <div class="ui segment">
+                        <h2 class="ui dividing header">
+                            <i class="huge folder open icon"></i>
+                            <div class="content">
+                                <span>Potential Projects</span>
+                                <div class="sub header">Projects you might enjoy working on</div>
+                            </div>
+                        </h2>
+
+                        <div class="ui divided link items">
+                            <div class="item">
+                                <div class="ui tiny circular image">
+                                    <img src="http://placehold.it/80x80" alt="">
+                                </div>
+                                <div class="content">
+                                    <div class="ui header">
+                                        <span>Project 1</span>
+                                    </div>
+                                    <div class="meta">
+                                        <span class="budget">$1500</span>|
+                                        <span class="timeline">90 Days</span>|
+                                        <span class="hours">15 hours</span>|
+                                        <span class="cms">Wordpress</span>
+                                    </div>
+                                    <div class="description">
+                                        <p>This project meets 4 bottom lines</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <div class="ui tiny circular image">
+                                    <img src="http://placehold.it/80x80" alt="">
+                                </div>
+                                <div class="content">
+                                    <div class="ui header">
+                                        <span>Project 2</span>
+                                    </div>
+                                    <div class="meta">
+                                        <span class="budget">$1500</span>|
+                                        <span class="timeline">90 Days</span>|
+                                        <span class="hours">15 hours</span>|
+                                        <span class="cms">Wordpress</span>
+                                    </div>
+                                    <div class="description">
+                                        <p>This project meets 4 bottom lines</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <div class="ui tiny circular image">
+                                    <img src="http://placehold.it/80x80" alt="">
+                                </div>
+                                <div class="content">
+                                    <div class="ui header">
+                                        <span>Project 3</span>
+                                    </div>
+                                    <div class="meta">
+                                        <span class="budget">$1500</span>|
+                                        <span class="timeline">90 Days</span>|
+                                        <span class="hours">15 hours</span>
+                                    </div>
+                                    <div class="description">
+                                        <p>This project meets 3 bottom lines</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
+                <section class="column">
+                    <div class="ui segment">
+                        <h2 class="ui dividing header">
+                            <i class="huge male icon"></i>
+                            <div class="content">
+                                <span>Potential Clients</span>
+                                <div class="sub header">You should work well with these leads</div>
+                            </div>
+                        </h2>
+
+                        <div class="ui divided link items">
+                            <div class="item">
+                                <div class="ui tiny circular image">
+                                    <img src="http://placehold.it/80x80" alt="">
+                                </div>
+                                <div class="content">
+                                    <div class="ui header">
+                                        <span>Lead 1</span>
+                                    </div>
+                                    <div class="meta">
+                                        <span class="type">Business</span>|
+                                        <span class="focus">Results</span>|
+                                        <span class="involvement">Hands Off</span>|
+                                        <span class="boos">Decision Maker</span>
+                                    </div>
+                                    <div class="description">
+                                        <p>This lead meets 4 bottom lines</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <div class="ui tiny circular image">
+                                    <img src="http://placehold.it/80x80" alt="">
+                                </div>
+                                <div class="content">
+                                    <div class="ui header">
+                                        <span>Lead 2</span>
+                                    </div>
+                                    <div class="meta">
+                                        <span class="type">Business</span>|
+                                        <span class="focus">Results</span>|
+                                        <span class="involvement">Hands Off</span>|
+                                        <span class="boos">Decision Maker</span>
+                                    </div>
+                                    <div class="description">
+                                        <p>This lead meets 4 bottom lines</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <div class="ui tiny circular image">
+                                    <img src="http://placehold.it/80x80" alt="">
+                                </div>
+                                <div class="content">
+                                    <div class="ui header">
+                                        <span>Lead 3</span>
+                                    </div>
+                                    <div class="meta">
+                                        <span class="type">Business</span>|
+                                        <span class="focus">Results</span>|
+                                        <span class="involvement">Hands Off</span>                                    </div>
+                                    <div class="description">
+                                        <p>This lead meets 3 bottom lines</p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </section>
+
+                <section class="column">
+                    <div class="ui segment">
+                        <h2 class="ui dividing header">
+                            <i class="huge settings icon"></i>
+                            <div class="content">
+                                <span>Your Bottom Lines</span>
+                                <div class="sub header">Projects must have these to be considered</div>
+                            </div>
+                        </h2>
+
+                        <div class="ui relaxed list">
+                            <div class="item">
+                                <div class="content aligned header">Budget</div>
+                                <span>Your minimum budget is $1000</span>
+                            </div>
+
+                            <div class="item">
+                                <div class="content aligned header">Hours</div>
+                                <span>You prefer to work no more than 20 hours</span>
+                            </div>
+
+                            <div class="item">
+                                <div class="content aligned header">Framework</div>
+                                <span>Your preferred framework is Semantic UI</span>
+                            </div>
+
+                            <div class="item">
+                                <div class="content aligned header">Themes</div>
+                                <span>You like to create custom designs</span>
+                            </div>
+
+                            <div class="item">
+                                <div class="content aligned header">CMS</div>
+                                <span>Your preferred CMS is Wordpress</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </main>
+
+    <footer class="one blue center aligned column row">
+        <span class="column">&copy; Philter 2015.</span>
+    </footer>
+
+</div>
+
+<!-- Scripts
+-------------------------->
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="semantic.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
