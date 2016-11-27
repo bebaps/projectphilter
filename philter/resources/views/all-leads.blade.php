@@ -10,7 +10,7 @@
             @foreach($leads as $lead)
                 <a href="/leads/{{ $lead->id }}" class="ui blue card">
                     <div class="image">
-                       @if ($lead->project_grade == "A")
+                        @if ($lead->project_grade == "A")
                             <img src="http://api.adorable.io/avatars/285/avatar">
                         @elseif ($lead->project_grade == "B")
                             <img src="http://api.adorable.io/avatars/285/bob">

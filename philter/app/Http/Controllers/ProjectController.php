@@ -2,25 +2,23 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Lead;
+use App\Models\Project;
 use Auth;
 use Carbon\Carbon;
-use App\Models\Lead;
-use App\Http\Requests;
-use App\Models\Project;
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
 
-class ProjectController extends Controller {
-
-    public function __construct() {
-
+class ProjectController extends Controller
+{
+    public function __construct()
+    {
         $user     = Auth::user();
         $projects = $user->projects;
 
         foreach ($projects as $project) {
-        /*****
-        *   Set the User bottom lines
-        *****/
+            /*****
+             *   Set the User bottom lines
+             *****/
             $userValues = collect([
                 'rate'             => $user->rate,
                 'type'             => $user->project,
@@ -37,7 +35,7 @@ class ProjectController extends Controller {
                 'lead boss'        => $user->boss,
             ]);
 
-        // set as individual values for comparison
+            // set as individual values for comparison
             $userRate            = $userValues->get('rate');
             $userProjectType     = $userValues->get('type');
             $userBudget          = $userValues->get('budget');
@@ -52,9 +50,9 @@ class ProjectController extends Controller {
             $userLeadInvolvement = $userValues->get('lead involvement');
             $userLeadBoss        = $userValues->get('lead boss');
 
-        /*****
-        *   Set the actual Project values
-        *****/
+            /*****
+             *   Set the actual Project values
+             *****/
             $actualValues = collect([
                 'rate'             => $user->rate,
                 'type'             => $project->project_type,
@@ -71,7 +69,7 @@ class ProjectController extends Controller {
                 'lead boss'        => $project->lead->lead_boss,
             ]);
 
-        // set as individual values for comparison
+            // set as individual values for comparison
             $actualRate            = $actualValues->get('rate');
             $actualProjectType     = $actualValues->get('type');
             $actualBudget          = $actualValues->get('budget');
@@ -86,9 +84,9 @@ class ProjectController extends Controller {
             $actualLeadInvolvement = $actualValues->get('lead involvement');
             $actualLeadBoss        = $actualValues->get('lead boss');
 
-        /*****
-        *   Grade calculation
-        *****/
+            /*****
+             *   Grade calculation
+             *****/
             $scores = collect([
                 'budget'           => 0,
                 'type'             => 0,
@@ -104,108 +102,108 @@ class ProjectController extends Controller {
                 'lead boss'        => 0,
             ]);
 
-        // Budget comparison
+            // Budget comparison
 
             if ($actualBudget >= ($userBudget * 2)) {
-                $scores['budget'] = 2;
+                $scores[ 'budget' ] = 2;
             } else if ($actualBudget >= $userBudget) {
-                $scores['budget'] = 1;
+                $scores[ 'budget' ] = 1;
             }
 
-        // Project Type comparison
+            // Project Type comparison
 
             if ($actualProjectType === $userProjectType) {
-                $scores['type'] = 1;
+                $scores[ 'type' ] = 1;
             }
 
-        // Hours comparison
+            // Hours comparison
 
             if ($actualHours > ($userHours * 2)) {
-                $scores['hours'] = 2;
+                $scores[ 'hours' ] = 2;
             } else if ($actualHours >= $userHours) {
-                $scores['hours'] = 1;
+                $scores[ 'hours' ] = 1;
             }
 
-        // Timeline comparison
+            // Timeline comparison
 
-            $today      = Carbon::today();
+            $today = Carbon::today();
 
             $launchDate = Carbon::createFromFormat('Y-m-d', $actualDays);
 
-            $days       = $today->diffInDays($launchDate);
+            $days = $today->diffInDays($launchDate);
 
             if ($days >= ($userDays * 2)) {
-                $scores['days'] = 2;
+                $scores[ 'days' ] = 2;
             } else if ($days >= $userDays) {
-                $scores['days'] = 1;
+                $scores[ 'days' ] = 1;
             }
 
-        // Size comparison
+            // Size comparison
 
             if ($actualSize === $userSize) {
-                $scores['size'] = 1;
+                $scores[ 'size' ] = 1;
             }
 
-        // Framework comparison
+            // Framework comparison
 
             if ($actualFramework === $userFramework) {
-                $scores['framework'] = 1;
+                $scores[ 'framework' ] = 1;
             }
 
-        // Theme comparison
+            // Theme comparison
 
             if ($actualTheme === $userTheme) {
-                $scores['theme'] = 1;
+                $scores[ 'theme' ] = 1;
             }
 
-        // CMS comparison
+            // CMS comparison
 
             if ($actualCms === $userCms) {
-                $scores['cms'] = 1;
+                $scores[ 'cms' ] = 1;
             }
 
-        // Lead Type comparison
+            // Lead Type comparison
 
             if ($actualLeadType === $userLeadType) {
-                $scores['lead type'] = 1;
+                $scores[ 'lead type' ] = 1;
             }
 
-        // Lead Focus comparison
+            // Lead Focus comparison
 
             if ($actualLeadFocus === $userLeadFocus) {
-                $scores['lead focus'] = 1;
+                $scores[ 'lead focus' ] = 1;
             }
 
-        // Lead Involvement comparison
+            // Lead Involvement comparison
 
             if ($actualLeadInvolvement === $userLeadInvolvement) {
-                $scores['lead involvement'] = 1;
+                $scores[ 'lead involvement' ] = 1;
             }
 
-        // Lead Boss comparison
+            // Lead Boss comparison
 
             if ($actualLeadBoss === $userLeadBoss) {
-                $scores['lead boss'] = 1;
+                $scores[ 'lead boss' ] = 1;
             }
 
-        // calculate the final scores and grade
+            // calculate the final scores and grade
             $numericGrade = $scores->sum() / $scores->count();
 
             $grade = 'A';
 
-                if ($numericGrade >= 0.90) {
-                    $grade = "A";
-                } else if ($numericGrade >= 0.80) {
-                    $grade = "B";
-                } else if ($numericGrade >= 0.70) {
-                    $grade = "C";
-                } else if ($numericGrade >= 0.60) {
-                    $grade = "D";
-                } else {
-                    $grade = "F";
-                }
+            if ($numericGrade >= 0.90) {
+                $grade = "A";
+            } else if ($numericGrade >= 0.80) {
+                $grade = "B";
+            } else if ($numericGrade >= 0.70) {
+                $grade = "C";
+            } else if ($numericGrade >= 0.60) {
+                $grade = "D";
+            } else {
+                $grade = "F";
+            }
 
-        // update the database
+            // update the database
             $project->project_score = $numericGrade;
             $project->project_grade = $grade;
             $project->project_hours = $actualHours;
@@ -216,29 +214,29 @@ class ProjectController extends Controller {
     }
 
     /****************************************
-        View all Projects
-    ****************************************/
-    public function index() {
-
+     * View all Projects
+     ****************************************/
+    public function index()
+    {
         $projects = Auth::user()->projects;
 
-        return view('all-projects',[ 'projects' => $projects]);
+        return view('all-projects', ['projects' => $projects]);
     }
 
     /****************************************
-        Show a form to create a new Project
-    ****************************************/
-    public function create() {
-
+     * Show a form to create a new Project
+     ****************************************/
+    public function create()
+    {
         return view('new-project');
     }
 
     /****************************************
-        Save a new Project in the database
-    ****************************************/
-    public function store(Request $request) {
-
-        $project                      = new Project;
+     * Save a new Project in the database
+     ****************************************/
+    public function store(Request $request)
+    {
+        $project = new Project;
 
         $project->project_name        = $request->input('project_name');
         $project->project_type        = $request->input('project_type');
@@ -250,7 +248,7 @@ class ProjectController extends Controller {
         $project->project_theme       = $request->input('project_theme');
         $project->project_cms         = $request->input('project_cms');
 
-        $lead                   = new Lead;
+        $lead = new Lead;
 
         $lead->lead_name        = $request->input('lead_name');
         $lead->lead_company     = $request->input('lead_company');
@@ -268,8 +266,8 @@ class ProjectController extends Controller {
         $lead->save();
 
         // link the new project and lead together in the database
-        $project->user_id         = Auth::user()->id;
-        $project->lead_id         = $lead->id;
+        $project->user_id = Auth::user()->id;
+        $project->lead_id = $lead->id;
 
         $project->save();
 
@@ -277,10 +275,10 @@ class ProjectController extends Controller {
     }
 
     /****************************************
-        Show an individual Project
-    ****************************************/
-    public function show($id) {
-
+     * Show an individual Project
+     ****************************************/
+    public function show($id)
+    {
         $user    = Auth::user();
         $project = $user->projects->find($id);
 
@@ -288,30 +286,30 @@ class ProjectController extends Controller {
     }
 
     /****************************************
-        Show the form to edit a Project
-    ****************************************/
-    public function edit($id) {
-
+     * Show the form to edit a Project
+     ****************************************/
+    public function edit($id)
+    {
         $project = Project::findOrFail($id);
 
-        return view('edit-project', [ 'project' => $project ]);
+        return view('edit-project', ['project' => $project]);
     }
 
     /****************************************
-        Update the Project in the database
-    ****************************************/
-    public function update(Request $request, $id) {
+     * Update the Project in the database
+     ****************************************/
+    public function update(Request $request, $id)
+    {
+        $project = Project::findOrFail($id);
 
-        $project                      = Project::findOrFail($id);
-
-        $project->project_name        = $request->input('project_name');
-        $project->project_type        = $request->input('project_type');
-        $project->project_budget      = $request->input('project_budget');
-        $project->project_timeline    = $request->input('project_timeline');
-        $project->project_size        = $request->input('project_size');
-        $project->project_framework   = $request->input('project_framework');
-        $project->project_theme       = $request->input('project_theme');
-        $project->project_cms         = $request->input('project_cms');
+        $project->project_name      = $request->input('project_name');
+        $project->project_type      = $request->input('project_type');
+        $project->project_budget    = $request->input('project_budget');
+        $project->project_timeline  = $request->input('project_timeline');
+        $project->project_size      = $request->input('project_size');
+        $project->project_framework = $request->input('project_framework');
+        $project->project_theme     = $request->input('project_theme');
+        $project->project_cms       = $request->input('project_cms');
 
         $project->save();
 
@@ -319,10 +317,10 @@ class ProjectController extends Controller {
     }
 
     /****************************************
-        Delete a Project from the database
-    ****************************************/
-    public function destroy($id) {
-
+     * Delete a Project from the database
+     ****************************************/
+    public function destroy($id)
+    {
         Project::destroy($id);
 
         return redirect('projects');

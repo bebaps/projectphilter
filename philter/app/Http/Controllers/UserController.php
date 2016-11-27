@@ -2,56 +2,56 @@
 
 namespace App\Http\Controllers;
 
-use Auth;
 use App\User;
-use App\Http\Requests;
+use Auth;
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
 
-class UserController extends Controller {
+class UserController extends Controller
+{
 
     /****************************************
-        Security
-    ****************************************/
-    public function __construct() {
+     * Security
+     ****************************************/
+    public function __construct()
+    {
         $this->middleware('auth');
     }
 
     /****************************************
-        View all Users
-    ****************************************/
-    public function index() {
-
+     * View all Users
+     ****************************************/
+    public function index()
+    {
         $user = Auth::user();
 
-        return view('users',[ 'user' => $user ]);
+        return view('users', ['user' => $user]);
     }
 
     /****************************************
-        Show an individual User
-    ****************************************/
-    public function show($id) {
-
+     * Show an individual User
+     ****************************************/
+    public function show($id)
+    {
         $user = Auth::user($id);
 
-        return view('user',[ 'user' => $user ]);
+        return view('user', ['user' => $user]);
     }
 
     /****************************************
-        Show the form to edit a User
-    ****************************************/
-    public function edit($id) {
-
+     * Show the form to edit a User
+     ****************************************/
+    public function edit($id)
+    {
         $user = Auth::user($id);
 
-        return view('edit-user', [ 'user' => $user ]);
+        return view('edit-user', ['user' => $user]);
     }
 
     /****************************************
-        Update the User in the database
-    ****************************************/
-    public function update(Request $request, $id) {
-
+     * Update the User in the database
+     ****************************************/
+    public function update(Request $request, $id)
+    {
         $user = Auth::user($id);
 
         $user->name        = $request->input('name');
@@ -76,10 +76,10 @@ class UserController extends Controller {
     }
 
     /****************************************
-        Delete a User from the database
-    ****************************************/
-    public function destroy($id) {
-
+     * Delete a User from the database
+     ****************************************/
+    public function destroy($id)
+    {
         User::destroy($id);
 
         return redirect('auth/login');

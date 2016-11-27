@@ -5,11 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Lead extends Model {
+class Lead extends Model
+{
 
     /****************************************
-        Database attributes
-    ****************************************/
+     * Database attributes
+     ****************************************/
 
     // define what can be mass assigned
     protected $fillable = [
@@ -30,11 +31,12 @@ class Lead extends Model {
     protected $dates = ['deleted_at'];
 
     /****************************************
-        Database Relationships
-    ****************************************/
+     * Database Relationships
+     ****************************************/
 
     // one to many join to the Projects table
-    public function projects() {
+    public function projects()
+    {
         return $this->hasMany('App\Models\Project');
     }
 }

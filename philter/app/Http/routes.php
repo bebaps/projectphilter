@@ -1,16 +1,16 @@
 <?php
 
 /****************************************
-    Defaults
-****************************************/
+ * Defaults
+ ****************************************/
 
 Route::get('/', function () {
     return view('auth.login');
 });
 
 /****************************************
-    User Authentication Routes
-****************************************/
+ * User Authentication Routes
+ ****************************************/
 
 // User Authentication
 Route::get('auth/login', 'Auth\AuthController@getLogin');
@@ -30,8 +30,8 @@ Route::get('home', function () {
 });
 
 /****************************************
-    Philter Routes
-****************************************/
+ * Philter Routes
+ ****************************************/
 
 // User Routing
 Route::resource('users', 'UserController', ['except' => ['update']]);

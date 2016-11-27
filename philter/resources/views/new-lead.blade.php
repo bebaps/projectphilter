@@ -133,7 +133,7 @@
 
                 <div class="ui field">
                     <label for="lead_focus" class="label">For this project, what is the most important aspect for you?</label>
-                    <select name="lead_focus" class="ui fluid dropdown">
+                        <select name="lead_focus" class="ui fluid dropdown">
                         <option value="{{ old('lead_focus') }}">Please select one</option>
                         <option value="cheap">Getting the cheapest price possible</option>
                         <option value="value">Getting the best value possible</option>

@@ -17,10 +17,10 @@
                 <div class="ui segment">
                     <h2 class="ui dividing header">
                         <i class="huge folder open icon"></i>
-                        <div class="content">
+                        <span class="content">
                             <span>Projects</span>
-                            <div class="sub header">Projects you might enjoy working on</div>
-                        </div>
+                            <span class="sub header">Projects you might enjoy working on</span>
+                        </span>
                     </h2>
 
                     <div class="ui divided link items">
@@ -43,12 +43,13 @@
                                     <div class="ui header">
                                         <span>{{ $project->project_name }}</span>
                                     </div>
+
                                     <div class="meta">
-                                        <span class="budget">${{ $project->project_budget }}</span>|
-                                        <span class="days">{{ $project->project_days }} days</span>|
-                                        <span class="type">{{ ucfirst($project->project_type) }}</span>|
+                                        <span class="budget">${{ $project->project_budget }}</span>| <span class="days">{{ $project->project_days }}
+                                            days</span>| <span class="type">{{ ucfirst($project->project_type) }}</span>|
                                         <span class="cms">{{ ucfirst($project->project_cms) }}</span>
                                     </div>
+
                                     <div class="description">
                                         <p>This project has a score of <strong>{{ number_format($project->project_score * 100) }}</strong></p>
 
@@ -81,10 +82,10 @@
                 <div class="ui segment">
                     <h2 class="ui dividing header">
                         <i class="huge diamond icon"></i>
-                        <div class="content">
+                        <span class="content">
                             <span>Most Recent Project</span>
-                            <div class="sub header">This is your most recent project. Check it out!</div>
-                        </div>
+                            <span class="sub header">This is your most recent project. Check it out!</span>
+                        </span>
                     </h2>
 
                     <div class="ui link items">
@@ -105,16 +106,13 @@
                             <div class="content">
                                 <h1 class="ui header">
                                     <span>{{ $project->project_name }}</span>
-                                    <div class="sub header">
+                                    <span class="sub header">
                                         <span>{{ $project->lead->lead_name }}</span>
-                                    </div>
+                                    </span>
                                 </h1>
 
                                 <div class="meta">
-                                    <span class="budget">${{ $project->project_budget }}</span>|
-                                    <span class="days">{{ $project->project_days }} days</span>|
-                                    <span class="type">{{ ucfirst($project->project_type) }}</span>|
-                                    <span class="cms">{{ ucfirst($project->project_cms) }}</span>
+                                    <span class="budget">${{ $project->project_budget }}</span> | <span class="days">{{ $project->project_days }} days</span> | <span class="type">{{ ucfirst($project->project_type) }}</span> | <span class="cms">{{ ucfirst($project->project_cms) }}</span>
                                 </div>
 
                                 <div class="description">
@@ -215,17 +213,17 @@
                 <div class="ui segment">
                     <h2 class="ui dividing header">
                         <i class="huge male icon"></i>
-                        <div class="content">
+                        <span class="content">
                             <span>Potential Clients</span>
-                            <div class="sub header">You should work well with these leads</div>
-                        </div>
+                            <span class="sub header">You should work well with these leads</span>
+                        </span>
                     </h2>
 
                     <div class="ui divided link items">
                         @foreach ($projects as $project)
                             <a href="/leads/{{ $project->lead->id }}" class="item">
                                 <div class="ui tiny image">
-                                   @if ($project->project_grade == "A")
+                                    @if ($project->project_grade == "A")
                                         <img src="http://api.adorable.io/avatars/285/avatar">
                                     @elseif ($project->project_grade == "B")
                                         <img src="http://api.adorable.io/avatars/285/bob">
@@ -241,12 +239,14 @@
                                     <div class="ui header">
                                         <span>{{ $project->lead->lead_name }}</span>
                                     </div>
+
                                     <div class="meta">
                                         <span class="type">{{ ucfirst($project->lead->lead_type) }}</span>|
                                         <span class="focus">{{ ucfirst($project->lead->lead_focus) }}</span>|
                                         <span class="involvement">{{ ucfirst($project->lead->lead_involvement) }}</span>|
                                         <span class="boss">{{ ucfirst($project->lead->lead_boss) }}</span>
                                     </div>
+
                                     <div class="description">
                                         <p>{{ $project->lead->lead_email }}</p>
                                         <p>{{ $project->lead->lead_phone }}</p>
@@ -257,7 +257,6 @@
                     </div>
                 </div>
             </section>
-
         </div>
     </section>
 
