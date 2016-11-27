@@ -1,12 +1,4 @@
-$(function() {
-
-    $('.ui.dropdown').dropdown();
-
-    $('.tabular.menu .item').tab();
-
-
-
-
-
-
-});
+$( function() {
+    $( '.ui.dropdown' ).dropdown();
+    $( '.tabular.menu .item' ).tab();
+} );

@@ -11,159 +11,169 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<!-- Lead Generation Page
-    - this page is just a form
-    - a long form would be too daunting
-    - the form though should be a multi-step form
-    - each step of the form captures each part of the needed project data
-    - the form then submits to a page on the server that will process the data
--------------------------->
-
-<div class="ui grid">
-    <!-- Lead Generation Form
+    <!-- Lead Generation Page
+        - this page is just a form
+        - a long form would be too daunting
+        - the form though should be a multi-step form
+        - each step of the form captures each part of the needed project data
+        - the form then submits to a page on the server that will process the data
     -------------------------->
-    <div class="eight wide centered column">
-        <form action="" class="ui fluid form segment">
-            <div class="one field">
-                <h2 class="ui dividing header">A little bit about the project</h2>
-                <div class="field">
-                    <label for="">Please give this project a name</label>
-                    <input type="text" placeholder="Project Name">
-                </div>
-                <div class="field">
-                    <label for="">What type of project will this be?</label>
-                    <select class="ui dropdown">
-                        <option value="">Please select a type</option>
-                        <option value="graphicdesign">Graphic Design</option>
-                        <option value="webdesign">Web Design</option>
-                        <option value="webdevelopment">Web Development</option>
-                        <option value="other">Other</option>
-                    </select>
-                </div>
-                <div class="field">
-                    <label for="">Please tell me about the project</label>
-                    <textarea></textarea>
-                </div>
-                <div class="field">
-                    <label for="">When does this project need to be completed?</label>
-                    <input type="date">
-                </div>
-                <div class="field">
-                    <label for="">What is your budget for this project?</label>
-                    <select class="ui dropdown">
-                        <option value="">Select a budget</option>
-                        <option value="unsure">I don't know</option>
-                        <option value="0-500">&lt; 500</option>
-                        <option value="500-1000">500-1000</option>
-                        <option value="1000-1500">1000-1500</option>
-                        <option value="1500-2000">1500-2000</option>
-                        <option value="2000+">&gt;2000</option>
-                    </select>
-                </div>
-                <div class="field">
-                    <label for="">How large will this project be?</label>
-                    <select class="ui dropdown">
-                        <option value="">Select the estimated size</option>
-                        <option value="unsure">I don't know</option>
-                        <option value="small">0-5 pages</option>
-                        <option value="medium">6-10 pages</option>
-                        <option value="large">11-20 pages</option>
-                        <option value="huge">21+ pages</option>
-                    </select>
-                </div>
-                <div class="field">
-                    <label for="">Would you like any CSS Frameworks to be used?</label>
-                    <select class="ui dropdown">
-                        <option value="">Select a framework</option>
-                        <option value="unsure">I don't know</option>
-                        <option value="bootstrap">Bootstrap</option>
-                        <option value="foundation">Foundation</option>
-                        <option value="sematic">Sematic</option>
-                        <option value="uikit">UI Kit</option>
-                        <option value="other">Other</option>
-                        <option value="no">Absolutely not</option>
-                    </select>
-                </div>
-                <div class="field">
-                    <label for="">Should this be a custom design site, or can templates/themes be used?</label>
-                    <select class="ui dropdown">
-                        <option value="">Please select an option</option>
-                        <option value="unsure">I don't know</option>
-                        <option value="custom">Custom designed</option>
-                        <option value="themes">Templates are okay</option>
-                        <option value="other">Other</option>
-                    </select>
-                </div>
-                <div class="field">
-                    <label for="">Will a Content Management System be used?</label>
-                    <select class="ui dropdown">
-                        <option value="">Select a CMS</option>
-                        <option value="unsure">I don't know</option>
-                        <option value="wordpress">Wordpress</option>
-                        <option value="joomla">Joomla</option>
-                        <option value="drupal">Drupal</option>
-                        <option value="ghost">Ghost</option>
-                        <option value="other">Other</option>
-                    </select>
+
+    <div class="ui grid">
+        <!-- Lead Generation Form -->
+        <div class="eight wide centered column">
+            <form action="" class="ui fluid form segment">
+                <div class="one field">
+                    <h2 class="ui dividing header">A little bit about the project</h2>
+
+                    <div class="field">
+                        <label for="">Please give this project a name</label>
+                        <input type="text" placeholder="Project Name">
+                    </div>
+
+                    <div class="field">
+                        <label for="">What type of project will this be?</label>
+                        <select class="ui dropdown">
+                            <option value="">Please select a type</option>
+                            <option value="graphicdesign">Graphic Design</option>
+                            <option value="webdesign">Web Design</option>
+                            <option value="webdevelopment">Web Development</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="field">
+                        <label for="">Please tell me about the project</label>
+                        <textarea></textarea>
+                    </div>
+
+                    <div class="field">
+                        <label for="">When does this project need to be completed?</label>
+                        <input type="date">
+                    </div>
+
+                    <div class="field">
+                        <label for="">What is your budget for this project?</label>
+                        <select class="ui dropdown">
+                            <option value="">Select a budget</option>
+                            <option value="unsure">I don't know</option>
+                            <option value="0-500">&lt; 500</option>
+                            <option value="500-1000">500-1000</option>
+                            <option value="1000-1500">1000-1500</option>
+                            <option value="1500-2000">1500-2000</option>
+                            <option value="2000+">&gt;2000</option>
+                        </select>
+                    </div>
+
+                    <div class="field">
+                        <label for="">How large will this project be?</label>
+                        <select class="ui dropdown">
+                            <option value="">Select the estimated size</option>
+                            <option value="unsure">I don't know</option>
+                            <option value="small">0-5 pages</option>
+                            <option value="medium">6-10 pages</option>
+                            <option value="large">11-20 pages</option>
+                            <option value="huge">21+ pages</option>
+                        </select>
+                    </div>
+
+                    <div class="field">
+                        <label for="">Would you like any CSS Frameworks to be used?</label>
+                        <select class="ui dropdown">
+                            <option value="">Select a framework</option>
+                            <option value="unsure">I don't know</option>
+                            <option value="bootstrap">Bootstrap</option>
+                            <option value="foundation">Foundation</option>
+                            <option value="sematic">Sematic</option>
+                            <option value="uikit">UI Kit</option>
+                            <option value="other">Other</option>
+                            <option value="no">Absolutely not</option>
+                        </select>
+                    </div>
+
+                    <div class="field">
+                        <label for="">Should this be a custom design site, or can templates/themes be used?</label>
+                        <select class="ui dropdown">
+                            <option value="">Please select an option</option>
+                            <option value="unsure">I don't know</option>
+                            <option value="custom">Custom designed</option>
+                            <option value="themes">Templates are okay</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="field">
+                        <label for="">Will a Content Management System be used?</label>
+                        <select class="ui dropdown">
+                            <option value="">Select a CMS</option>
+                            <option value="unsure">I don't know</option>
+                            <option value="wordpress">Wordpress</option>
+                            <option value="joomla">Joomla</option>
+                            <option value="drupal">Drupal</option>
+                            <option value="ghost">Ghost</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <h2 class="ui dividing header">A little bit about you</h2>
+
+                    <div class="field">
+                        <label for="">What is your name?</label>
+                        <input type="text" placeholder="Your Name">
+                    </div>
+
+                    <div class="field">
+                        <label for="">Who is this website for?</label>
+                        <select class="ui dropdown">
+                            <option value="">Please select an option</option>
+                            <option value="individual">Individual</option>
+                            <option value="localorganization">Local Organization</option>
+                            <option value="smallbusiness">Small Business</option>
+                            <option value="largebusiness">Large Business</option>
+                            <option value="corporation">Corporation</option>
+                            <option value="government">Government</option>
+                            <option value="nonprofit">Non-Profit</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="field">
+                        <label for="">What is most important to you?</label>
+                        <select class="ui dropdown">
+                            <option value="">Please select one</option>
+                            <option value="cheap">Getting the cheapest price possible</option>
+                            <option value="value">Getting the best value possible</option>
+                            <option value="results">Getting the best results possible</option>
+                        </select>
+                    </div>
+
+                    <div class="field">
+                        <label for="">How much involvement would you like to have?</label>
+                        <select class="ui dropdown">
+                            <option value="">Please select one</option>
+                            <option value="unsure">You're the Pro, you tell me!</option>
+                            <option value="handson">I am very hands on</option>
+                            <option value="handsoff">Do what you want, I trust you</option>
+                        </select>
+                    </div>
+
+                    <div class="field">
+                        <label for="">Are you the primary decision maker?</label>
+                        <select class="ui dropdown">
+                            <option value="">Please select one</option>
+                            <option value="yes">Yes, I make all the decisions</option>
+                            <option value="comittee">No, there is a committee involved</option>
+                            <option value="primarycontact">No, but I am the primary contact</option>
+                        </select>
+                    </div>
                 </div>
 
-                <h2 class="ui dividing header">A little bit about you</h2>
-
-                <div class="field">
-                    <label for="">What is your name?</label>
-                    <input type="text" placeholder="Your Name">
-                </div>
-
-                <div class="field">
-                    <label for="">Who is this website for?</label>
-                    <select class="ui dropdown">
-                        <option value="">Please select an option</option>
-                        <option value="individual">Individual</option>
-                        <option value="localorganization">Local Organization</option>
-                        <option value="smallbusiness">Small Business</option>
-                        <option value="largebusiness">Large Business</option>
-                        <option value="corporation">Corporation</option>
-                        <option value="government">Government</option>
-                        <option value="nonprofit">Non-Profit</option>
-                        <option value="other">Other</option>
-                    </select>
-                </div>
-                <div class="field">
-                    <label for="">What is most important to you?</label>
-                    <select class="ui dropdown">
-                        <option value="">Please select one</option>
-                        <option value="cheap">Getting the cheapest price possible</option>
-                        <option value="value">Getting the best value possible</option>
-                        <option value="results">Getting the best results possible</option>
-                    </select>
-                </div>
-                <div class="field">
-                    <label for="">How much involvement would you like to have?</label>
-                    <select class="ui dropdown">
-                        <option value="">Please select one</option>
-                        <option value="unsure">You're the Pro, you tell me!</option>
-                        <option value="handson">I am very hands on</option>
-                        <option value="handsoff">Do what you want, I trust you</option>
-                    </select>
-                </div>
-                <div class="field">
-                    <label for="">Are you the primary decision maker?</label>
-                    <select class="ui dropdown">
-                        <option value="">Please select one</option>
-                        <option value="yes">Yes, I make all the decisions</option>
-                        <option value="comittee">No, there is a committee involved</option>
-                        <option value="primarycontact">No, but I am the primary contact</option>
-                    </select>
-                </div>
-
-            </div>
-            <button class="ui submit button">Submit</button>
-        </form>
+                <button class="ui submit button">Submit</button>
+            </form>
+        </div>
     </div>
-</div>
 
-<!-- Scripts
--------------------------->
+    <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="semantic.min.js"></script>
     <script src="main.js"></script>

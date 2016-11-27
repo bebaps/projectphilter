@@ -3,20 +3,20 @@
 namespace App;
 
 use Illuminate\Auth\Authenticatable;
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\SoftDeletes;
-
 use Illuminate\Auth\Passwords\CanResetPassword;
 use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
 use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
-class User extends Model implements AuthenticatableContract, CanResetPasswordContract {
+class User extends Model implements AuthenticatableContract, CanResetPasswordContract
+{
 
     use Authenticatable, CanResetPassword;
 
     /****************************************
-        Database attributes
-    ****************************************/
+     * Database attributes
+     ****************************************/
 
     // define what can be mass assigned
     protected $fillable = ['name', 'email', 'password'];
@@ -27,11 +27,12 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
     protected $dates = ['deleted_at'];
 
     /****************************************
-        Database Relationships
-    ****************************************/
+     * Database Relationships
+     ****************************************/
 
     // one to many join to the Projects table
-    public function projects() {
+    public function projects()
+    {
         return $this->hasMany('App\Models\Project');
     }
 }

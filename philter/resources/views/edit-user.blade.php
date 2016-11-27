@@ -14,10 +14,10 @@
             <div class="column">
                 <h2 class="ui dividing header">
                     <i class="huge diamond icon"></i>
-                    <div class="content">
+                    <span class="content">
                         <span>Edit</span>
-                        <div class="sub header">Make changes to {{ $user->name }}</div>
-                    </div>
+                        <span class="sub header">Make changes to {{ $user->name }}</span>
+                    </span>
                 </h2>
 
                 @if (count($errors) > 0)

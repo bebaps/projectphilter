@@ -6,9 +6,9 @@
         <div class="column">
             <h2 class="ui teal image header">
                 <i class="ui large filter icon"></i>
-                <div class="content">
+                <span class="content">
                     Log-in to your account
-                </div>
+                </span>
             </h2>
 
             @if (count($errors) > 0)
@@ -35,8 +35,7 @@
 
                     <div class="field">
                         <div class="ui left icon input">
-                            <i class="lock icon"></i>
-                            <input type="password" name="password" placeholder="Password">
+                            <i class="lock icon"></i> <input type="password" name="password" placeholder="Password">
                         </div>
                     </div>
 

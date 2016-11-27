@@ -11,165 +11,166 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<!-- Projects Page
-    - This is the main view for the Projects.
-    - It consists of a sub-nav to show all the projects.
-    - Once a project is selected, a new area appears that shows the project summary and details.
-    - This layout and code for this page will be nearly identical to the Leads page/view.
-    - It may be best to explore CSS3 and JS ways to implement loading of data without page reloads (maybe tabs, ajax, etc.)
--------------------------->
-
-<div class="ui grid">
-
-    <!-- Header
+    <!-- Projects Page
+        - This is the main view for the Projects.
+        - It consists of a sub-nav to show all the projects.
+        - Once a project is selected, a new area appears that shows the project summary and details.
+        - This layout and code for this page will be nearly identical to the Leads page/view.
+        - It may be best to explore CSS3 and JS ways to implement loading of data without page reloads (maybe tabs, ajax, etc.)
     -------------------------->
-    <header class="sixteen wide column row">
-        <nav class="ui menu right">
-            <img src="" alt=""><a href="#" class="item">Project Philter</a>
-            <div class="right menu">
-                <div class="ui dropdown item">
-                    <i class="alarm icon"></i>
-                    <div class="text">Notifications</div>
-                    <i class="dropdown icon"></i>
-                    <div class="menu">
-                        <div class="item">
-                            Notifications go here
+
+    <div class="ui grid">
+
+        <!-- Header -->
+        <header class="sixteen wide column row">
+            <nav class="ui menu right">
+                <img src="" alt="">
+                <a href="#" class="item">Project Philter</a>
+
+                <div class="right menu">
+                    <div class="ui dropdown item">
+                        <i class="alarm icon"></i>
+                        <div class="text">Notifications</div>
+                        <i class="dropdown icon"></i>
+                        <div class="menu">
+                            <div class="item">Notifications go here</div>
+                        </div>
+                    </div>
+
+                    <div class="ui dropdown item">
+                        <i class="user icon"></i>
+                        <div class="text">User</div>
+                        <i class="dropdown icon"></i>
+                        <div class="menu">
+                            <div class="item"><a href="#">Settings</a></div>
+                            <div class="item"><a href="#">Update</a></div>
+                            <div class="item"><a href="#">Logout</a></div>
                         </div>
                     </div>
                 </div>
-                <div class="ui dropdown item">
-                    <i class="user icon"></i>
-                    <div class="text">User</div>
-                    <i class="dropdown icon"></i>
-                    <div class="menu">
-                        <div class="item"><a href="#">Settings</a></div>
-                        <div class="item"><a href="#">Update</a></div>
-                        <div class="item"><a href="#">Logout</a></div>
-                    </div>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-    <main class="three column equal height row">
-        <!-- Sidebar Navigation
-            - this sidebar navigation ideally has the ability to be hidden, like a sticky menu
-        -------------------------->
-        <aside class="two wide column">
-            <nav class="ui fluid vertical menu">
-                <a href="#" class="item">Dashboard</a>
-                <a href="#" class="item">Projects</a>
-                <a href="#" class="item">Leads</a>
-                <a href="#" class="item">Messages</a>
             </nav>
-        </aside>
+        </header>
 
-        <!-- Sub Navigation
-            -this menu displays all of the available projects to choose from
-        -------------------------->
-        <aside class="two wide column">
-            <nav class="ui fluid vertical menu">
-                <a href="#" class="item">Project</a>
-            </nav>
-        </aside>
-
-        <!-- Project Area
-            - this area shows the details of the selected project
-        -------------------------->
-        <section class="fourteen wide column">
-            <!-- Header & Menu
+        <main class="three column equal height row">
+            <!-- Sidebar Navigation
+                - this sidebar navigation ideally has the ability to be hidden, like a sticky menu
             -------------------------->
-            <div class="ui two column grid">
-                <div class="column">
-                    <h1 class="ui header">
-                        Project Name
-                        <div class="sub header">Lead Name | Lead Email</div>
-                    </h1>
-                    <div class="ui buttons">
-                      <button class="ui positive button">Accept</button>
-                      <span class="or"></span>
-                      <button class="ui negative button">Reject</button>
-                    </div>
-                </div>
-                <div class="column">
-                    <nav class="ui secondary pointing menu">
-                        <a href="" class="item">Overview</a>
-                        <a href="" class="active item">Bottom Lines</a>
-                        <a href="" class="item">Lead</a>
-                        <a href="" class="item">Ideals</a>
-                    </nav>
-                </div>
-            </div>
+            <aside class="two wide column">
+                <nav class="ui fluid vertical menu">
+                    <a href="#" class="item">Dashboard</a>
+                    <a href="#" class="item">Projects</a>
+                    <a href="#" class="item">Leads</a>
+                    <a href="#" class="item">Messages</a>
+                </nav>
+            </aside>
 
-            <!-- Main Content
+            <!-- Sub Navigation
+                -this menu displays all of the available projects to choose from
             -------------------------->
-            <div class="ui two column grid">
-                <div class="column">
-                    <h3 class="ui header">Bottom Lines </h3>
+            <aside class="two wide column">
+                <nav class="ui fluid vertical menu">
+                    <a href="#" class="item">Project</a>
+                </nav>
+            </aside>
 
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil dolore error officia, voluptatibus, magnam quae repudiandae, a aut corrupti sit expedita dicta rerum cumque excepturi deleniti esse odio nobis totam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque dolores veritatis delectus accusamus, eius quam, quasi consequuntur esse! Reprehenderit a nemo veniam consequuntur in enim porro aut quibusdam tenetur dicta! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam illum dolores debitis porro doloribus tenetur pariatur modi, obcaecati aliquam commodi cum impedit non, eos atque nihil eveniet amet hic beatae.</p>
+            <!-- Project Area
+                - this area shows the details of the selected project
+            -------------------------->
+            <section class="fourteen wide column">
+                <!-- Header and Menu -->
+                <div class="ui two column grid">
+                    <div class="column">
+                        <h1 class="ui header">
+                            Project Name
+                            <span class="sub header">Lead Name | Lead Email</span>
+                        </h1>
 
-                    <div class="ui two column grid">
-                        <div class="column">
-                            <h3 class="ui header">The Good</h3>
-                            <!-- List
-                                - I will need to style the UL to not show the bullets by default
-                                - positive matched bottom lines will have green check marks
-                                - negative matched bottom lines will have a red minus
-                            -------------------------->
-                            <ul class="ui relaxed list">
-                                <li class="item">
-                                    <i class="green check circle icon"></i>Requirement 2
-                                </li>
-                                <li class="item">
-                                    <i class="green check circle icon"></i>Requirement 3
-                                </li>
-                                <li class="item">
-                                    <i class="green check circle icon"></i>Requirement 3
-                                </li>
-                                <li class="item">
-                                    <i class="green check circle icon"></i>Requirement 3
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="column">
-                            <h3 class="ui header">The Bad</h3>
-                            <ul class="ui relaxed list">
-                                <li class="item">
-                                    <i class="red minus circle icon"></i>Requirement 4
-                                </li>
-                                <li class="item">
-                                    <i class="red minus circle icon"></i>Requirement 4
-                                </li>
-                                <li class="item">
-                                    <i class="red minus circle icon"></i>Requirement 4
-                                </li>
-                                <li class="item">
-                                    <i class="red minus circle icon"></i>Requirement 4
-                                </li>
-                            </ul>
+                        <div class="ui buttons">
+                            <button class="ui positive button">Accept</button>
+                            <span class="or"></span>
+                            <button class="ui negative button">Reject</button>
                         </div>
                     </div>
+                    <div class="column">
+                        <nav class="ui secondary pointing menu">
+                            <a href="" class="item">Overview</a>
+                            <a href="" class="active item">Bottom Lines</a>
+                            <a href="" class="item">Lead</a>
+                            <a href="" class="item">Ideals</a>
+                        </nav>
+                    </div>
                 </div>
-                <div class="column">
-                    <img src="http://placehold.it/450x350" alt="">
+
+                <!-- Main Content -->
+                <div class="ui two column grid">
+                    <div class="column">
+                        <h3 class="ui header">Bottom Lines </h3>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil dolore error officia, voluptatibus, magnam quae
+                            repudiandae, a aut corrupti sit expedita dicta rerum cumque excepturi deleniti esse odio nobis totam. Lorem ipsum dolor
+                            sit amet, consectetur adipisicing elit. Doloremque dolores veritatis delectus accusamus, eius quam, quasi consequuntur
+                            esse! Reprehenderit a nemo veniam consequuntur in enim porro aut quibusdam tenetur dicta! Lorem ipsum dolor sit amet,
+                            consectetur adipisicing elit. Laboriosam illum dolores debitis porro doloribus tenetur pariatur modi, obcaecati aliquam
+                            commodi cum impedit non, eos atque nihil eveniet amet hic beatae.</p>
+
+                        <div class="ui two column grid">
+                            <div class="column">
+                                <h3 class="ui header">The Good</h3>
+                                <!-- List
+                                    - I will need to style the UL to not show the bullets by default
+                                    - positive matched bottom lines will have green check marks
+                                    - negative matched bottom lines will have a red minus
+                                -------------------------->
+                                <ul class="ui relaxed list">
+                                    <li class="item">
+                                        <i class="green check circle icon"></i> Requirement 2
+                                    </li>
+                                    <li class="item">
+                                        <i class="green check circle icon"></i> Requirement 3
+                                    </li>
+                                    <li class="item">
+                                        <i class="green check circle icon"></i> Requirement 4
+                                    </li>
+                                    <li class="item">
+                                        <i class="green check circle icon"></i> Requirement 5
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="column">
+                                <h3 class="ui header">The Bad</h3>
+                                <ul class="ui relaxed list">
+                                    <li class="item">
+                                        <i class="red minus circle icon"></i> Requirement 6
+                                    </li>
+                                    <li class="item">
+                                        <i class="red minus circle icon"></i> Requirement 7
+                                    </li>
+                                    <li class="item">
+                                        <i class="red minus circle icon"></i> Requirement 8
+                                    </li>
+                                    <li class="item">
+                                        <i class="red minus circle icon"></i> Requirement 9
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <img src="http://placehold.it/450x350" alt="">
+                    </div>
                 </div>
-            </div>
 
-        </section>
+            </section>
+        </main>
 
-    </main>
+        <!-- Footer -->
+        <footer class="one center aligned column row">
+            <span class="column">&copy; Project Philter 2015.</span>
+        </footer>
 
-    <!-- Footer
-    -------------------------->
-    <footer class="one center aligned column row">
-        <span class="column">&copy; Project Philter 2015.</span>
-    </footer>
+    </div>
 
-</div>
-
-<!-- Scripts
--------------------------->
+    <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="semantic.min.js"></script>
     <script src="main.js"></script>

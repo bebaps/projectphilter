@@ -19,9 +19,9 @@
                 <div class="five wide column">
                     <h1 class="ui header">
                         <span>{{ $lead->lead->lead_name }}</span>
-                        <div class="sub header">
+                        <span class="sub header">
                             <span>{{ $lead->lead->lead_company }}</span>
-                        </div>
+                        </span>
                     </h1>
 
                     <div class="ui horizontal divider">Overview</div>
