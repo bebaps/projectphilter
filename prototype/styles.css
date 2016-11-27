@@ -3,12 +3,12 @@
 ****************************************/
 
 header .ui.menu {
-    background-color: #3B83C0;
+    background-color: #3b83c0;
     padding: 10px;
 }
 
 header .ui.menu .item {
-    color: #ffffff;
+    color: #fff;
 }
 
 .sidebar {
@@ -16,15 +16,15 @@ header .ui.menu .item {
 }
 
 aside .fluid.vertical.menu {
-    background-color: #D95C5C;
+    background-color: #d95c5c;
 }
 
 aside .fluid.vertical.menu .item {
-    color: #ffffff;
+    color: #fff;
 }
 
 aside .ui.vertical.menu > .item:first-child {
-  border-radius: 0px;
+    border-radius: 0;
 }
 
 aside .fluid.vertical.menu .active.item {
@@ -36,13 +36,13 @@ aside .fluid.vertical.menu .active.item {
 }
 
 .module {
-    background-color: #red;
+    background-color: red;
 }
 
 /****************************************
     Footer
 ****************************************/
 footer {
-    background-color: #ffffff;
+    background-color: #fff;
     border-top: 1px solid #4d8ca1;
 }
