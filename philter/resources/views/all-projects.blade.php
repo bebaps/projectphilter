@@ -23,6 +23,7 @@
                             <img src="{{ asset('images/F.gif') }}">
                         @endif
                     </div>
+
                     <div class="content">
                         <span class="header">{{ $project->project_name }}</span>
 
@@ -34,6 +35,7 @@
                             {{ str_limit($project->project_description, 300) }}
                         </div>
                     </div>
+
                     <div class="center aligned extra content ui small labels">
                         <span class="ui green label">${{ $project->project_budget }}</span>
                         <span class="ui blue label">{{ $project->project_days }} days</span>

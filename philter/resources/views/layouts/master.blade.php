@@ -13,136 +13,111 @@
 </head>
 <body>
 
-<!-- The Dashboard
-    - the Notifications link is a dead link at this time
-    - in the future, it will simply show notifications of new projects submitted and so on
-    - the Messages and Settings links in the sidebar are also dead links right now
-    - the Messages highlights a future feature of Philter, being able to send and receive mail from the application
-    - there are Accept and Reject buttons. When clicked, it will link to the Messages view and allow the User to send and email to the Lead
-    - the email will either move forward with the project or decline the project
--------------------------->
-
-<div class="ui padded stackable grid">
-
-    <!-- Header
+    <!-- The Dashboard
+        - the Notifications link is a dead link at this time
+        - in the future, it will simply show notifications of new projects submitted and so on
+        - the Messages and Settings links in the sidebar are also dead links right now
+        - the Messages highlights a future feature of Philter, being able to send and receive mail from the application
+        - there are Accept and Reject buttons. When clicked, it will link to the Messages view and allow the User to send and email to the Lead
+        - the email will either move forward with the project or decline the project
     -------------------------->
-    <header class="one column row primary-header">
-        <div class="column">
-            <nav class="ui menu right">
-                {{-- Logo Area --}}
 
+    <div class="ui padded stackable grid">
 
-                <a href="{{ url('/home') }}" class="item"><i class="ui large filter icon"></i></a>
+        <!-- Header -->
+        <header class="one column row primary-header">
+            <div class="column">
+                <nav class="ui menu right">
+                    {{-- Logo Area --}}
 
-                {{-- Floated menu to the right --}}
-                <div class="right menu">
-                    @if (Auth::guest())
-                        <a href="{{ url('/auth/login') }}" class="item">Login</a>
-                        <a href="{{ url('/auth/register') }}" class="item">Register</a>
-                    @else
-                        <div class="ui dropdown item">
-                            <i class="add square icon"></i>
+                    <a href="{{ url('/home') }}" class="item"><i class="ui large filter icon"></i></a>
 
-                            <div class="text">Create New</div>
+                    {{-- Floated menu to the right --}}
+                    <div class="right menu">
+                        @if (Auth::guest())
+                            <a href="{{ url('/auth/login') }}" class="item">Login</a>
+                            <a href="{{ url('/auth/register') }}" class="item">Register</a>
+                        @else
+                            <div class="ui dropdown item">
+                                <i class="add square icon"></i>
 
-                            <i class="dropdown icon"></i>
+                                <div class="text">Create New</div>
 
-                            <div class="menu">
-                                <div class="item">
-                                    <a href="/projects/create">New Project</a>
-                                </div>
+                                <i class="dropdown icon"></i>
 
-                                <div class="item">
-                                    <a href="#">New Lead</a>
-                                </div>
-                            </div>
-                        </div>
+                                <div class="menu">
+                                    <div class="item">
+                                        <a href="/projects/create">New Project</a>
+                                    </div>
 
-                        <div class="ui dropdown item">
-                            <i class="alarm icon"></i>
-
-                            <div class="text">Notifications</div>
-
-                            <i class="dropdown icon"></i>
-
-                            <div class="menu">
-                                <div class="item">Notifications go here</div>
-                            </div>
-                        </div>
-
-                        <div class="ui dropdown item">
-                            <i class="user icon"></i>
-
-                            <div class="text">{{ Auth::user()->name }}</div>
-
-                            <i class="dropdown icon"></i>
-
-                            <div class="menu">
-                                <div class="item">
-                                    <a href="/users/{{ Auth::user()->id }}/edit">Update</a>
-                                </div>
-
-                                <div class="item">
-                                    <a href="{{ url('/auth/logout') }}">Logout</a>
+                                    <div class="item">
+                                        <a href="#">New Lead</a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    @endif
-                </div>
 
-            </nav>
-        </div>
-    </header>
+                            <div class="ui dropdown item">
+                                <i class="alarm icon"></i>
 
-    <main class="equal height row">
+                                <div class="text">Notifications</div>
 
-        <!-- Sidebar
-        -------------------------->
-        <aside class="two wide column sidebar primary-sidebar">
-            <nav class="ui fluid vertical labeled icon secondary pointing menu">
-                <a href="{{ url('home') }}" class="item">
-                    <i class="large dashboard icon"></i>
-                    Dashboard
-                </a>
+                                <i class="dropdown icon"></i>
 
-                <a href="{{ url('projects') }}" class="item">
-                    <i class="large folder open icon"></i>
-                    Projects
-                </a>
+                                <div class="menu">
+                                    <div class="item">Notifications go here</div>
+                                </div>
+                            </div>
 
-                <a href="{{ url('leads') }}" class="item">
-                    <i class="large male icon"></i>
-                    Leads
-                </a>
+                            <div class="ui dropdown item">
+                                <i class="user icon"></i>
 
-                <a href="{{-- {{ url('messages') }} --}}" class="item">
-                    <i class="large comments icon"></i>
-                    Messages
-                </a>
+                                <div class="text">{{ Auth::user()->name }}</div>
 
-                <a href="{{-- {{ url('settings') }} --}}" class="item">
-                    <i class="large settings icon"></i>
-                    Settings
-                </a>
-            </nav>
-        </aside>
+                                <i class="dropdown icon"></i>
 
-        <!-- Main Content
-        -------------------------->
-        @yield('content')
+                                <div class="menu">
+                                    <div class="item">
+                                        <a href="/users/{{ Auth::user()->id }}/edit">Update</a>
+                                    </div>
 
-    </main>
+                                    <div class="item">
+                                        <a href="{{ url('/auth/logout') }}">Logout</a>
+                                    </div>
+                                </div>
+                            </div>
+                        @endif
+                    </div>
 
-    <!-- Footer
-    -------------------------->
-    <footer class="center aligned one column row primary-footer">
-        <span class="column">&copy; Philter 2015.</span>
-    </footer>
+                </nav>
+            </div>
+        </header>
 
-</div>
+        <main class="equal height row">
 
-<!-- Scripts
--------------------------->
+            <!-- Sidebar -->
+            <aside class="two wide column sidebar primary-sidebar">
+                <nav class="ui fluid vertical labeled icon secondary pointing menu">
+                    <a href="{{ url('home') }}" class="item"><i class="large dashboard icon"></i> Dashboard</a>
+                    <a href="{{ url('projects') }}" class="item"><i class="large folder open icon"></i> Projects</a>
+                    <a href="{{ url('leads') }}" class="item"><i class="large male icon"></i> Leads</a>
+                    <a href="{{-- {{ url('messages') }} --}}" class="item"><i class="large comments icon"></i> Messages</a>
+                    <a href="{{-- {{ url('settings') }} --}}" class="item"><i class="large settings icon"></i> Settings</a>
+                </nav>
+            </aside>
+
+            <!-- Main Content -->
+            @yield('content')
+
+        </main>
+
+        <!-- Footer -->
+        <footer class="center aligned one column row primary-footer">
+            <span class="column">&copy; Philter 2015.</span>
+        </footer>
+
+    </div>
+
+    <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="{{ asset('js/semantic.min.js') }}"></script>
     <script src="{{ asset('js/main.js') }}"></script>

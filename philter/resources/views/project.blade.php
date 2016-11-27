@@ -20,15 +20,14 @@
                 <div class="eleven wide column">
                     <h1 class="ui header">
                         <span>{{ $project->project_name }}</span>
-                        <div class="sub header">
-                            <span>{{ $project->lead->lead_name }}</span> |
-                            <span>{{ $project->lead->lead_email }}</span>
-                        </div>
+                        <span class="sub header">
+                            <span>{{ $project->lead->lead_name }}</span> | <span>{{ $project->lead->lead_email }}</span>
+                        </span>
                     </h1>
                     <div class="ui buttons">
-                      <button class="ui positive button">Accept</button>
-                      <span class="or"></span>
-                      <button class="ui negative button">Reject</button>
+                        <button class="ui positive button">Accept</button>
+                        <span class="or"></span>
+                        <button class="ui negative button">Reject</button>
                     </div>
 
                     <div class="ui horizontal divider">Project Description</div>
@@ -78,207 +77,209 @@
                     <div class="ui center aligned green segment">
                         @if ($project->project_score >= 0.8)
                             <div class="ui huge green statistic">
-                        @elseif ($project->project_score >= 0.5)
-                            <div class="ui huge yellow statistic">
-                        @else
-                            <div class="ui huge red statistic">
-                        @endif
-                            <div class="value">{{ number_format($project->project_score * 100) }}</div>
-                                <div class="label">Total Score</div>
+                                @elseif ($project->project_score >= 0.5)
+                                    <div class="ui huge yellow statistic">
+                                        @else
+                                            <div class="ui huge red statistic">
+                                                @endif
+                                                <div class="value">{{ number_format($project->project_score * 100) }}</div>
+                                                <div class="label">Total Score</div>
+                                            </div>
+                                    </div>
                             </div>
                     </div>
                 </div>
-            </div>
-        </div>
 
-        <div class="ui bottom attached tab segment" data-tab="second">
-            <div class="ui two column grid">
-                <div class="column">
-                    <h2 class="ui dividing header">
-                        <i class="huge settings icon"></i>
-                        <div class="content">
-                            <span>Your Bottom Lines</span>
-                            <div class="sub header">Take a look at how this Project stacks up</div>
-                        </div>
-                    </h2>
+                <div class="ui bottom attached tab segment" data-tab="second">
+                    <div class="ui two column grid">
+                        <div class="column">
+                            <h2 class="ui dividing header">
+                                <i class="huge settings icon"></i>
+                                <span class="content">
+                                    <span>Your Bottom Lines</span>
+                                    <span class="sub header">Take a look at how this Project stacks up</span>
+                                </span>
+                            </h2>
 
-                    <!-- List
-                        - this list is currently hard coded in for demo purposes
-                        - the goal is to have the list be dynamically generated as a result of the custom bottom lines set forth by the user
-                    -------------------------->
-                    <div class="ui relaxed list">
-                        <div class="item">
-                            @if ($project->project_budget >= $user->budget)
-                                <i class="large green check icon"></i>
-                            @else
-                                <i class="large red minus icon"></i>
-                            @endif
-                            <div class="content">
-                                <div class="header">Budget</div>
-                                <div class="description">${{ $project->project_budget }}</div>
-                            </div>
-                        </div>
+                            <!-- List
+                                - this list is currently hard coded in for demo purposes
+                                - the goal is to have the list be dynamically generated as a result of the custom bottom lines set forth by the user
+                            -------------------------->
+                            <div class="ui relaxed list">
+                                <div class="item">
+                                    @if ($project->project_budget >= $user->budget)
+                                        <i class="large green check icon"></i>
+                                    @else
+                                        <i class="large red minus icon"></i>
+                                    @endif
+                                    <div class="content">
+                                        <div class="header">Budget</div>
+                                        <div class="description">${{ $project->project_budget }}</div>
+                                    </div>
+                                </div>
 
-                        <div class="item">
-                            @if ($project->project_days >= $user->days)
-                                <i class="large green check icon"></i>
-                            @else
-                                <i class="large red minus icon"></i>
-                            @endif
-                            <div class="content">
-                                <div class="header">Timeline</div>
-                                <div class="description">{{ $project->project_days }} days</div>
-                            </div>
-                        </div>
+                                <div class="item">
+                                    @if ($project->project_days >= $user->days)
+                                        <i class="large green check icon"></i>
+                                    @else
+                                        <i class="large red minus icon"></i>
+                                    @endif
+                                    <div class="content">
+                                        <div class="header">Timeline</div>
+                                        <div class="description">{{ $project->project_days }} days</div>
+                                    </div>
+                                </div>
 
-                        <div class="item">
-                            @if ($project->project_hours >= $user->hours)
-                                <i class="large green check icon"></i>
-                            @else
-                                <i class="large red minus icon"></i>
-                            @endif
-                            <div class="content">
-                                <div class="header">Hours</div>
-                                <div class="description">{{ $project->project_hours }} hours</div>
-                            </div>
-                        </div>
+                                <div class="item">
+                                    @if ($project->project_hours >= $user->hours)
+                                        <i class="large green check icon"></i>
+                                    @else
+                                        <i class="large red minus icon"></i>
+                                    @endif
+                                    <div class="content">
+                                        <div class="header">Hours</div>
+                                        <div class="description">{{ $project->project_hours }} hours</div>
+                                    </div>
+                                </div>
 
-                        <div class="item">
-                            @if ($project->project_size >= $user->size)
-                                <i class="large green check icon"></i>
-                            @else
-                                <i class="large red minus icon"></i>
-                            @endif
-                            <div class="content">
-                                <div class="header">Size</div>
-                                <div class="description">{{ ucfirst($project->project_size ) }}</div>
-                            </div>
-                        </div>
+                                <div class="item">
+                                    @if ($project->project_size >= $user->size)
+                                        <i class="large green check icon"></i>
+                                    @else
+                                        <i class="large red minus icon"></i>
+                                    @endif
+                                    <div class="content">
+                                        <div class="header">Size</div>
+                                        <div class="description">{{ ucfirst($project->project_size ) }}</div>
+                                    </div>
+                                </div>
 
-                        <div class="item">
-                            @if ($project->project_framework == $user->framework)
-                                <i class="large green check icon"></i>
-                            @else
-                                <i class="large red minus icon"></i>
-                            @endif
-                            <div class="content">
-                                <div class="header">Framework</div>
-                                <div class="description">{{ ucfirst($project->project_framework) }}</div>
-                            </div>
-                        </div>
+                                <div class="item">
+                                    @if ($project->project_framework == $user->framework)
+                                        <i class="large green check icon"></i>
+                                    @else
+                                        <i class="large red minus icon"></i>
+                                    @endif
+                                    <div class="content">
+                                        <div class="header">Framework</div>
+                                        <div class="description">{{ ucfirst($project->project_framework) }}</div>
+                                    </div>
+                                </div>
 
-                        <div class="item">
-                            @if ($project->project_theme == $user->theme)
-                                <i class="large green check icon"></i>
-                            @else
-                                <i class="large red minus icon"></i>
-                            @endif
-                            <div class="content">
-                                <div class="header">Theme</div>
-                                <div class="description">{{ ucfirst($project->project_theme) }}</div>
-                            </div>
-                        </div>
+                                <div class="item">
+                                    @if ($project->project_theme == $user->theme)
+                                        <i class="large green check icon"></i>
+                                    @else
+                                        <i class="large red minus icon"></i>
+                                    @endif
+                                    <div class="content">
+                                        <div class="header">Theme</div>
+                                        <div class="description">{{ ucfirst($project->project_theme) }}</div>
+                                    </div>
+                                </div>
 
-                        <div class="item">
-                            @if ($project->project_cms == $user->cms)
-                                <i class="large green check icon"></i>
-                            @else
-                                <i class="large red minus icon"></i>
-                            @endif
-                            <div class="content">
-                                <div class="header">CMS</div>
-                                <div class="description">{{ ucfirst($project->project_cms) }}</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="ui bottom attached tab segment" data-tab="third">
-            <div class="ui two column grid">
-                <div class="column">
-                    <h2 class="ui dividing header">
-                        <i class="huge male icon"></i>
-                        <div class="content">
-                            <span>Lead Characteristics</span>
-                            <div class="sub header">See how you might get along with this client</div>
-                        </div>
-                    </h2>
-
-                    <!-- List
-                        - this list is currently hard coded in for demo purposes
-                        - the goal is to have the list be dynamically generated as a result of the custom bottom lines set forth by the user
-                    -------------------------->
-                    <div class="ui relaxed list">
-                        <div class="item">
-                            @if ($project->lead->lead_type == $user->type)
-                                <i class="large green check icon"></i>
-                            @else
-                                <i class="large red minus icon"></i>
-                            @endif
-                            <div class="content">
-                                <div class="header">Lead Type</div>
-                                <div class="description">{{ ucfirst($project->lead->lead_type) }}</div>
-                            </div>
-                        </div>
-
-                        <div class="item">
-                            @if ($project->lead->lead_focus == $user->focus)
-                                <i class="large green check icon"></i>
-                            @else
-                                <i class="large red minus icon"></i>
-                            @endif
-                            <div class="content">
-                                <div class="header">Lead Focus</div>
-                                <div class="description">{{ ucfirst($project->lead->lead_focus) }}</div>
-                            </div>
-                        </div>
-
-                        <div class="item">
-                            @if ($project->lead->lead_involvement == $user->involvement)
-                                <i class="large green check icon"></i>
-                            @else
-                                <i class="large red minus icon"></i>
-                            @endif
-                            <div class="content">
-                                <div class="header">Lead Involvement</div>
-                                <div class="description">{{ ucfirst($project->lead->lead_involvement) }}</div>
-                            </div>
-                        </div>
-
-                        <div class="item">
-                            @if ($project->lead->lead_boss == $user->boss)
-                                <i class="large green check icon"></i>
-                            @else
-                                <i class="large red minus icon"></i>
-                            @endif
-                            <div class="content">
-                                <div class="header">Decision Maker</div>
-                                <div class="description">{{ ucfirst($project->lead->lead_boss) }}</div>
+                                <div class="item">
+                                    @if ($project->project_cms == $user->cms)
+                                        <i class="large green check icon"></i>
+                                    @else
+                                        <i class="large red minus icon"></i>
+                                    @endif
+                                    <div class="content">
+                                        <div class="header">CMS</div>
+                                        <div class="description">{{ ucfirst($project->project_cms) }}</div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
 
-        <!-- Delete
-            - for this demo, the delete button is simply displayed
-            - for production if the button is pressed, an additional alert will trigger to confirm the action
-        -------------------------->
-        <div class="ui bottom attached tab segment" data-tab="fith">
-            <div class="ui one column row">
-                <div class="column">
+                <div class="ui bottom attached tab segment" data-tab="third">
+                    <div class="ui two column grid">
+                        <div class="column">
+                            <h2 class="ui dividing header">
+                                <i class="huge male icon"></i>
+                                <span class="content">
+                                    <span>Lead Characteristics</span>
+                                    <span class="sub header">See how you might get along with this client</span>
+                                </span>
+                            </h2>
 
-                    <p>Delete this project.</p>
+                            <!-- List
+                                - this list is currently hard coded in for demo purposes
+                                - the goal is to have the list be dynamically generated as a result of the custom bottom lines set forth by the user
+                            -------------------------->
+                            <div class="ui relaxed list">
+                                <div class="item">
+                                    @if ($project->lead->lead_type == $user->type)
+                                        <i class="large green check icon"></i>
+                                    @else
+                                        <i class="large red minus icon"></i>
+                                    @endif
+                                    <div class="content">
+                                        <div class="header">Lead Type</div>
+                                        <div class="description">{{ ucfirst($project->lead->lead_type) }}</div>
+                                    </div>
+                                </div>
 
-                    <form action="" method="POST">
-                        {!! csrf_field() !!}
-                        <input type="hidden" name="_method" value="DELETE">
-                        <input type="hidden" name="id" value="{{ $project->project_id }}">
-                        <button class="ui red button">Delete</button>
-                    </form>
+                                <div class="item">
+                                    @if ($project->lead->lead_focus == $user->focus)
+                                        <i class="large green check icon"></i>
+                                    @else
+                                        <i class="large red minus icon"></i>
+                                    @endif
+                                    <div class="content">
+                                        <div class="header">Lead Focus</div>
+                                        <div class="description">{{ ucfirst($project->lead->lead_focus) }}</div>
+                                    </div>
+                                </div>
+
+                                <div class="item">
+                                    @if ($project->lead->lead_involvement == $user->involvement)
+                                        <i class="large green check icon"></i>
+                                    @else
+                                        <i class="large red minus icon"></i>
+                                    @endif
+                                    <div class="content">
+                                        <div class="header">Lead Involvement</div>
+                                        <div class="description">{{ ucfirst($project->lead->lead_involvement) }}</div>
+                                    </div>
+                                </div>
+
+                                <div class="item">
+                                    @if ($project->lead->lead_boss == $user->boss)
+                                        <i class="large green check icon"></i>
+                                    @else
+                                        <i class="large red minus icon"></i>
+                                    @endif
+                                    <div class="content">
+                                        <div class="header">Decision Maker</div>
+                                        <div class="description">{{ ucfirst($project->lead->lead_boss) }}</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Delete
+                    - for this demo, the delete button is simply displayed
+                    - for production if the button is pressed, an additional alert will trigger to confirm the action
+                -------------------------->
+                <div class="ui bottom attached tab segment" data-tab="fith">
+                    <div class="ui one column row">
+                        <div class="column">
+
+                            <p>Delete this project.</p>
+
+                            <form action="" method="POST">
+                                {!! csrf_field() !!}
+                                <input type="hidden" name="_method" value="DELETE">
+                                <input type="hidden" name="id" value="{{ $project->project_id }}">
+                                <button class="ui red button">Delete</button>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

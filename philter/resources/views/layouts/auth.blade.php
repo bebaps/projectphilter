@@ -13,20 +13,18 @@
 </head>
 <body>
 
-<div class="ui padded stackable grid">
+    <div class="ui padded stackable grid">
 
-    <main class="ui column centered row">
+        <main class="ui column centered row">
 
-        <!-- Main Content
-        -------------------------->
-        @yield('content')
+            <!-- Main Content -->
+            @yield('content')
 
-    </main>
+        </main>
 
-</div>
+    </div>
 
-<!-- Scripts
--------------------------->
+    <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="{{ asset('js/semantic.min.js') }}"></script>
     <script src="{{ asset('js/main.js') }}"></script>
